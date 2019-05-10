@@ -44,6 +44,11 @@ namespace HairSalon.Models
             return _id;
         }
 
+        public static List<Stylist> GetAll()
+        {
+            return _instances;
+        }
+
         public static void ClearAll()
         {
             _instances.Clear();
