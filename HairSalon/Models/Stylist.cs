@@ -34,6 +34,16 @@ namespace HairSalon.Models
             return _id;
         }
 
+        public void AddClient(Client client)
+        {
+            _clients.Add(client);
+        }
+
+        public List<Client> GetClients()
+        {
+            return _clients;
+        }
+
         public static Stylist Find(int searchId)
         {
             return _instances[searchId-1];

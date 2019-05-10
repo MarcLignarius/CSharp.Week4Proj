@@ -40,7 +40,7 @@ namespace HairSalon.Tests
         }
 
         [TestMethod]
-        public void GetId_ReturnsCategoryId_Int()
+        public void GetId_ReturnsStylistId_Int()
         {
             //Arrange
             string name = "Sara";
@@ -90,6 +90,45 @@ namespace HairSalon.Tests
 
             //Assert
             Assert.AreEqual(newStylist2, result);
+        }
+
+        [TestMethod]
+        public void GetClients_ReturnsEmptyClientList_ClientList()
+        {
+            //Arrange
+            string name = "Sara";
+            string description = "Sara is the best";
+            Stylist newStylist = new Stylist(name, description);
+            List<Client> newList = new List<Client> { };
+
+            //Act
+            List<Client> result = newStylist.GetClients();
+
+            //Assert
+            CollectionAssert.AreEqual(newList, result);
+        }
+
+        [TestMethod]
+        public void AddClient_AssociatesClientWithStylist_ClientList()
+        {
+            //Arrange
+            int id= 1;
+            string firstName = "Marc";
+            string lastName = "Davies";
+            string phoneNumber = "3232866556";
+            string emailAddress = "marcdaviesriot@gmail.com";
+            Client newClient = new Client(id, firstName, lastName, phoneNumber, emailAddress);
+            List<Client> newList = new List<Client> { newClient };
+            string name = "Sara";
+            string description = "Sara is the best";
+            Stylist newStylist = new Stylist(name, description);
+            newStylist.AddClient(newClient);
+
+            //Act
+            List<Client> result = newStylist.GetClients();
+
+            //Assert
+            CollectionAssert.AreEqual(newList, result);
         }
 
     }
