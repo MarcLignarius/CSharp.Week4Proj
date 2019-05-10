@@ -14,11 +14,6 @@ C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\bin\Debug\netcoreapp2.2\Hair
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.TagHelpers.input.cache
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.TagHelpers.output.cache
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.RazorCoreGenerate.cache
-C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Customers\DeleteCustomer.g.cshtml.cs
-C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Customers\Edit.g.cshtml.cs
-C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Customers\Index.g.cshtml.cs
-C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Customers\New.g.cshtml.cs
-C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Customers\Show.g.cshtml.cs
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Stylists\Index.g.cshtml.cs
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Stylists\New.g.cshtml.cs
@@ -29,3 +24,8 @@ C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Hair
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.dll
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.pdb
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.csproj.CopyComplete
+C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\DeleteClient.g.cshtml.cs
+C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Edit.g.cshtml.cs
+C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Index.g.cshtml.cs
+C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\New.g.cshtml.cs
+C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Show.g.cshtml.cs
