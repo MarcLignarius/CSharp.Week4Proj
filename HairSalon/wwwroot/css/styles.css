@@ -1,3 +1,16 @@
 .btn {
   margin-bottom: 5px;
 }
+
+#space {
+  margin-top: 50px;
+}
+
+label, input {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+
+input {
+  margin-bottom: 5px;
+}

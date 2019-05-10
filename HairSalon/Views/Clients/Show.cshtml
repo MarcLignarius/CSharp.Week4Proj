@@ -1,0 +1,26 @@
+@using HairSalon.Models;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Chez Marc Hair Salon</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Chez Marc Hair Salon</h1>
+    </div>
+    <h3>Contact information for @Model.GetFirstName() @Model.GetLastName()</h3>
+      <ul>
+        <li>Phone Number: @Model.GetPhoneNumber()</li>
+        <li>Email Address: @Model.GetEmailAddress()</li>
+      </ul>
+    <div id="space">
+    <div>
+    <hr>
+    <a href="/clients" class="btn btn-dark">Back to client list</a>
+  </div>
+</body>
+</html>
