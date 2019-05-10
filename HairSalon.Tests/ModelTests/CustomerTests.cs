@@ -11,7 +11,7 @@ namespace HairSalon.Tests
         public void ClientConstructor_CreatesInstanceOfClient_Client()
         {
           // Arrange
-          Client newClient = new Client("Marc");
+          Client newClient = new Client("Marc", "Davies");
 
           // Assert
           Assert.AreEqual(typeof(Client), newClient.GetType());
@@ -22,13 +22,29 @@ namespace HairSalon.Tests
         {
           // Arrange
           string firstName = "Marc";
-          Client newClient = new Client(firstName);
+          string lastName = "Davies";
+          Client newClient = new Client(firstName, lastName);
 
           // Act
           string result = newClient.GetFirstName();
 
           // Assert
           Assert.AreEqual(firstName, result);
+        }
+
+        [TestMethod]
+        public void GetLastName_ReturnsLastName_String()
+        {
+          // Arrange
+          string firstName = "Marc";
+          string lastName = "Davies";
+          Client newClient = new Client(firstName, lastName);
+
+          // Act
+          string result = newClient.GetLastName();
+
+          // Assert
+          Assert.AreEqual(lastName, result);
         }
 
     }
