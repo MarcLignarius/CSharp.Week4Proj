@@ -21,9 +21,9 @@ namespace HairSalon.Controllers
     }
 
     [HttpPost("/clients")]
-    public ActionResult Create(string firstName, string lastName, string phoneNumber, string emailAddress)
+    public ActionResult Create(int id, string firstName, string lastName, string phoneNumber, string emailAddress)
     {
-        Client myClient = new Client(firstName, lastName, phoneNumber, emailAddress);
+        Client myClient = new Client(id, firstName, lastName, phoneNumber, emailAddress);
         return RedirectToAction("Index");
     }
 

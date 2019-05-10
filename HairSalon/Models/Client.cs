@@ -5,19 +5,21 @@ namespace HairSalon.Models
 {
     public class Client
     {
+        private int _id;
         private string _firstName;
         private string _lastName;
         private string _phoneNumber;
         private string _emailAddress;
         private static List<Client> _instances = new List<Client> {};
 
-        public Client (string firstName, string lastName, string phoneNumber, string emailAddress)
+        public Client (int id, string firstName, string lastName, string phoneNumber, string emailAddress)
         {
             _firstName = firstName;
             _lastName = lastName;
             _phoneNumber = phoneNumber;
             _emailAddress = emailAddress;
             _instances.Add(this);
+            _id = _instances.Count;
         }
 
         public string GetFirstName()
@@ -58,6 +60,11 @@ namespace HairSalon.Models
         public void SetEmailAddress(string newEmailAddress)
         {
             _emailAddress = newEmailAddress;
+        }
+
+        public int GetId()
+        {
+            return _id;
         }
 
         public static List<Client> GetAll()
