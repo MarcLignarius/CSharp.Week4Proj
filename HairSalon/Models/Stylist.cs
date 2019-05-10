@@ -24,24 +24,19 @@ namespace HairSalon.Models
             return _name;
         }
 
-        // public string SetName(string newName)
-        // {
-        //     _name = newName;
-        // }
-
         public string GetDescription()
         {
             return _description;
         }
 
-        // public string SetDescription(string newDescription)
-        // {
-        //     _description = newDescription;
-        // }
-
         public int GetId()
         {
             return _id;
+        }
+
+        public static Stylist Find(int searchId)
+        {
+            return _instances[searchId-1];
         }
 
         public static List<Stylist> GetAll()

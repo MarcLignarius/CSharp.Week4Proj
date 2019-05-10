@@ -73,5 +73,24 @@ namespace HairSalon.Tests
           CollectionAssert.AreEqual(newList, result);
         }
 
+        [TestMethod]
+        public void Find_ReturnsCorrectStylist_Stylist()
+        {
+            //Arrange
+            string name1 = "Sara";
+            string description1 = "Sara is the best";
+            string name2 = "Jen";
+            string description2 = "Jen rocks";
+            Stylist newStylist1 = new Stylist(name1, description1);
+            Stylist newStylist2 = new Stylist(name2, description2);
+            List<Stylist> newList = new List<Stylist> { newStylist1, newStylist2 };
+
+            //Act
+            Stylist result = Stylist.Find(2);
+
+            //Assert
+            Assert.AreEqual(newStylist2, result);
+        }
+
     }
 }
