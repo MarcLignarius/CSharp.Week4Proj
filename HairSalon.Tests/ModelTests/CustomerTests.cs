@@ -4,14 +4,31 @@ using HairSalon.Models;
 namespace HairSalon.Tests
 {
     [TestClass]
-    public class CustomerTest
+    public class ClientTest
     {
 
         [TestMethod]
-        public void CustomerConstructor_CreatesInstanceOfCustomer_Customer()
+        public void ClientConstructor_CreatesInstanceOfClient_Client()
         {
-          Customer newCustomer = new Customer();
-          Assert.AreEqual(typeof(Customer), newCustomer.GetType());
+          // Arrange
+          Client newClient = new Client("Marc");
+
+          // Assert
+          Assert.AreEqual(typeof(Client), newClient.GetType());
+        }
+
+        [TestMethod]
+        public void GetFirstName_ReturnsFirstName_String()
+        {
+          // Arrange
+          string firstName = "Marc";
+          Client newClient = new Client(firstName);
+
+          // Act
+          string result = newClient.GetFirstName();
+
+          // Assert
+          Assert.AreEqual(firstName, result);
         }
 
     }

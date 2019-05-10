@@ -1,9 +1,17 @@
 namespace HairSalon.Models
 {
-    public class Customer
+    public class Client
     {
+        private string _firstName;
 
-        // properties, methods, etc. will go here.
+        public Client (string firstName)
+        {
+            _firstName = firstName;
+        }
 
+        public string GetFirstName()
+        {
+            return _firstName;
+        }
     }
 }
