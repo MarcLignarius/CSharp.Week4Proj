@@ -10,14 +10,33 @@ namespace HairSalon.Models
         private string _description;
         private List<Client> _clients;
 
-        public Stylist(int id, string name, string description)
+        public Stylist(string name, string description)
         {
-            _id = id;
             _name = name;
             _description = description;
             _instances.Add(this);
             _id = _instances.Count;
             _clients = new List<Client>{};
+        }
+
+        public string GetName()
+        {
+            return _name;
+        }
+
+        public string SetName(string newName)
+        {
+            _name = newName;
+        }
+
+        public string GetDescription()
+        {
+            return _description;
+        }
+
+        public string SetDescription(string newDescription)
+        {
+            _description = newDescription;
         }
     }
 }
