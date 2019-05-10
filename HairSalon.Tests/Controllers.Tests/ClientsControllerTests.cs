@@ -13,8 +13,7 @@ namespace HairSalon.Tests
       public void Index_HasCorrectModelType_ClientList()
       {
           //Arrange
-          ClientsController controller = new ClientsController();
-          ViewResult indexView = controller.Index() as ViewResult;
+          ViewResult indexView = new ClientsController().Index() as ViewResult;
 
           //Act
           var result = indexView.ViewData.Model;
