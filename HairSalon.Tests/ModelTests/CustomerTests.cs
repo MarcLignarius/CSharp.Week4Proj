@@ -34,6 +34,24 @@ namespace HairSalon.Tests
         }
 
         [TestMethod]
+        public void SetFirstName_SetFirstName_String()
+        {
+            // Arrange
+            string firstName = "Marc";
+            string lastName = "Davies";
+            string phoneNumber = "3232866556";
+            Client newClient = new Client(firstName, lastName, phoneNumber);
+
+            //Act
+            string updatedFirstName = "Mimi";
+            newClient.SetFirstName(updatedFirstName);
+            string result = newClient.GetFirstName();
+
+            //Assert
+            Assert.AreEqual(updatedFirstName, result);
+        }
+
+        [TestMethod]
         public void GetLastName_ReturnsLastName_String()
         {
           // Arrange
