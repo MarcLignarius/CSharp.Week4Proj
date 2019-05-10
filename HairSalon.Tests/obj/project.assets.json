@@ -13631,11 +13631,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mimim\\desktop\\HairSalon.Solution\\HairSalon.Tests\\HairSalon.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\mimim\\Desktop\\HairSalon.Solution\\HairSalon.Tests\\HairSalon.Tests.csproj",
       "projectName": "HairSalon.Tests",
-      "projectPath": "C:\\Users\\mimim\\desktop\\HairSalon.Solution\\HairSalon.Tests\\HairSalon.Tests.csproj",
+      "projectPath": "C:\\Users\\mimim\\Desktop\\HairSalon.Solution\\HairSalon.Tests\\HairSalon.Tests.csproj",
       "packagesPath": "C:\\Users\\mimim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mimim\\desktop\\HairSalon.Solution\\HairSalon.Tests\\obj\\",
+      "outputPath": "C:\\Users\\mimim\\Desktop\\HairSalon.Solution\\HairSalon.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13652,8 +13652,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\mimim\\desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj": {
-              "projectPath": "C:\\Users\\mimim\\desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj"
+            "C:\\Users\\mimim\\Desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj": {
+              "projectPath": "C:\\Users\\mimim\\Desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj"
             }
           }
         }

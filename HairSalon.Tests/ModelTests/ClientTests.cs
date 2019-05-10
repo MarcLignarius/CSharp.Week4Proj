@@ -18,7 +18,7 @@ namespace HairSalon.Tests
         public void ClientConstructor_CreatesInstanceOfClient_Client()
         {
           // Arrange
-          Client newClient = new Client("Marc", "Davies", "3232866556");
+          Client newClient = new Client("Marc", "Davies", "3232866556", "marcdaviesriot@gmail.com");
 
           // Assert
           Assert.AreEqual(typeof(Client), newClient.GetType());
@@ -31,7 +31,8 @@ namespace HairSalon.Tests
           string firstName = "Marc";
           string lastName = "Davies";
           string phoneNumber = "3232866556";
-          Client newClient = new Client(firstName, lastName, phoneNumber);
+          string emailAddress = "marcdaviesriot@gmail.com";
+          Client newClient = new Client(firstName, lastName, phoneNumber, emailAddress);
 
           // Act
           string result = newClient.GetFirstName();
@@ -47,7 +48,8 @@ namespace HairSalon.Tests
             string firstName = "Marc";
             string lastName = "Davies";
             string phoneNumber = "3232866556";
-            Client newClient = new Client(firstName, lastName, phoneNumber);
+            string emailAddress = "marcdaviesriot@gmail.com";
+            Client newClient = new Client(firstName, lastName, phoneNumber, emailAddress);
 
             //Act
             string updatedFirstName = "Mimi";
@@ -65,7 +67,8 @@ namespace HairSalon.Tests
           string firstName = "Marc";
           string lastName = "Davies";
           string phoneNumber = "3232866556";
-          Client newClient = new Client(firstName, lastName, phoneNumber);
+          string emailAddress = "marcdaviesriot@gmail.com";
+          Client newClient = new Client(firstName, lastName, phoneNumber, emailAddress);
 
           // Act
           string result = newClient.GetLastName();
@@ -81,7 +84,8 @@ namespace HairSalon.Tests
             string firstName = "Marc";
             string lastName = "Davies";
             string phoneNumber = "3232866556";
-            Client newClient = new Client(firstName, lastName, phoneNumber);
+            string emailAddress = "marcdaviesriot@gmail.com";
+            Client newClient = new Client(firstName, lastName, phoneNumber, emailAddress);
 
             //Act
             string updatedLastName = "Ajili";
@@ -99,7 +103,8 @@ namespace HairSalon.Tests
             string firstName = "Marc";
             string lastName = "Davies";
             string phoneNumber = "3232866556";
-            Client newClient = new Client(firstName, lastName, phoneNumber);
+            string emailAddress = "marcdaviesriot@gmail.com";
+            Client newClient = new Client(firstName, lastName, phoneNumber, emailAddress);
 
             // Act
             string result = newClient.GetPhoneNumber();
@@ -115,7 +120,8 @@ namespace HairSalon.Tests
             string firstName = "Marc";
             string lastName = "Davies";
             string phoneNumber = "3232866556";
-            Client newClient = new Client(firstName, lastName, phoneNumber);
+            string emailAddress = "marcdaviesriot@gmail.com";
+            Client newClient = new Client(firstName, lastName, phoneNumber, emailAddress);
 
             //Act
             string updatedPhoneNumber = "3232746995";
@@ -124,6 +130,42 @@ namespace HairSalon.Tests
 
             //Assert
             Assert.AreEqual(updatedPhoneNumber, result);
+        }
+
+        [TestMethod]
+        public void GetEmailAddress_ReturnsEmailAddress_String()
+        {
+            // Arrange
+            string firstName = "Marc";
+            string lastName = "Davies";
+            string phoneNumber = "3232866556";
+            string emailAddress = "marcdaviesriot@gmail.com";
+            Client newClient = new Client(firstName, lastName, phoneNumber, emailAddress);
+
+            // Act
+            string result = newClient.GetEmailAddress();
+
+            // Assert
+            Assert.AreEqual(emailAddress, result);
+        }
+
+        [TestMethod]
+        public void SetEmailAddress_SetEmailAddress_String()
+        {
+            // Arrange
+            string firstName = "Marc";
+            string lastName = "Davies";
+            string phoneNumber = "3232866556";
+            string emailAddress = "marcdaviesriot@gmail.com";
+            Client newClient = new Client(firstName, lastName, phoneNumber, emailAddress);
+
+            //Act
+            string updatedEmailAddress = "daviesmarc1983@gmail.com";
+            newClient.SetEmailAddress(updatedEmailAddress);
+            string result = newClient.GetEmailAddress();
+
+            //Assert
+            Assert.AreEqual(updatedEmailAddress, result);
         }
 
         [TestMethod]
@@ -149,8 +191,10 @@ namespace HairSalon.Tests
             string lastName2 = "Davies";
             string phoneNumber1 = "3232866556";
             string phoneNumber2 = "3232746995";
-            Client newClient1 = new Client(firstName1, lastName1, phoneNumber1);
-            Client newClient2 = new Client(firstName2, lastName2, phoneNumber2);
+            string emailAddress1 = "marcdaviesriot@gmail.com";
+            string emailAddress2 = "mimimdavies@gmail.com";
+            Client newClient1 = new Client(firstName1, lastName1, phoneNumber1, emailAddress1);
+            Client newClient2 = new Client(firstName2, lastName2, phoneNumber2, emailAddress2);
             List<Client> newList = new List<Client> { newClient1, newClient2 };
 
             //Act
