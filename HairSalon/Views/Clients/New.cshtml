@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Chez Marc Hair Salon</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Chez Marc Hair Salon</h1>
+    </div>
+    <p>Please enter new client information:</p>
+    <form action="/clients" method="post">
+      <label for="firstName">First Name: </label>
+      <input id="firstName" name="firstName" type="text">
+      <label for="lastName">Last Name: </label>
+      <input id="lastName" name="lastName" type="text">
+      <label for="phoneNumber">Phone Number: </label>
+      <input id="phoneNumber" name="phoneNumber" type="text">
+      <label for="emailAddress">Email Address: </label>
+      <input id="emailAddress" name="emailAddress" type="text">
+      <button type="submit" class="btn btn-dark">Add</button>
+    </form>
+  </div>
+</body>
+</html>

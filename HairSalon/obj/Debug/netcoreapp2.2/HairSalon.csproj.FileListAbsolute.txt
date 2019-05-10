@@ -29,4 +29,3 @@ C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razo
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Index.g.cshtml.cs
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\New.g.cshtml.cs
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Show.g.cshtml.cs
-C:\Users\mimim\Desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Home\New.g.cshtml.cs
