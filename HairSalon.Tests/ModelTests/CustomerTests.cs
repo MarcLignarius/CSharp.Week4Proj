@@ -1,12 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using HairSalon.Models;
 
 namespace HairSalon.Tests
 {
     [TestClass]
-    public class ClientTest
+    public class ClientTest : IDisposable
     {
+
+        public void Dispose()
+        {
+          Client.ClearAll();
+        }
 
         [TestMethod]
         public void ClientConstructor_CreatesInstanceOfClient_Client()
@@ -130,6 +136,27 @@ namespace HairSalon.Tests
             List<Client> result = Client.GetAll();
 
             // Assert
+            CollectionAssert.AreEqual(newList, result);
+        }
+
+        [TestMethod]
+        public void GetAll_ReturnsClients_ClientList()
+        {
+            //Arrange
+            string firstName1 = "Marc";
+            string firstName2 = "Davies";
+            string lastName1 = "Mimi";
+            string lastName2 = "Davies";
+            string phoneNumber1 = "3232866556";
+            string phoneNumber2 = "3232746995";
+            Client newClient1 = new Client(firstName1, lastName1, phoneNumber1);
+            Client newClient2 = new Client(firstName2, lastName2, phoneNumber2);
+            List<Client> newList = new List<Client> { newClient1, newClient2 };
+
+            //Act
+            List<Client> result = Client.GetAll();
+
+            //Assert
             CollectionAssert.AreEqual(newList, result);
         }
     }

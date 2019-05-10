@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace HairSalon.Models
@@ -7,12 +8,14 @@ namespace HairSalon.Models
         private string _firstName;
         private string _lastName;
         private string _phoneNumber;
+        private static List<Client> _instances = new List<Client> {};
 
         public Client (string firstName, string lastName, string phoneNumber)
         {
             _firstName = firstName;
             _lastName = lastName;
             _phoneNumber = phoneNumber;
+            _instances.Add(this);
         }
 
         public string GetFirstName()
@@ -47,7 +50,12 @@ namespace HairSalon.Models
 
         public static List<Client> GetAll()
         {
-            return new List<Client> {};
+            return _instances;
+        }
+
+        public static void ClearAll()
+        {
+            _instances.Clear();
         }
     }
 }
