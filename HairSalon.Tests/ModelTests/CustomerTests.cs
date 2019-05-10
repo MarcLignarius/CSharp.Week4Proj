@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using HairSalon.Models;
 
 namespace HairSalon.Tests
@@ -119,5 +120,17 @@ namespace HairSalon.Tests
             Assert.AreEqual(updatedPhoneNumber, result);
         }
 
+        [TestMethod]
+        public void GetAll_ReturnsEmptyList_ClientList()
+        {
+            // Arrange
+            List<Client> newList = new List<Client> { };
+
+            // Act
+            List<Client> result = Client.GetAll();
+
+            // Assert
+            CollectionAssert.AreEqual(newList, result);
+        }
     }
 }

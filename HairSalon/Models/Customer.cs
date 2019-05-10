@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace HairSalon.Models
 {
     public class Client
@@ -43,7 +45,9 @@ namespace HairSalon.Models
             _phoneNumber = newPhoneNumber;
         }
 
-
-
+        public static List<Client> GetAll()
+        {
+            return new List<Client> {};
+        }
     }
 }
