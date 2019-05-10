@@ -101,5 +101,23 @@ namespace HairSalon.Tests
             Assert.AreEqual(phoneNumber, result);
         }
 
+        [TestMethod]
+        public void SetPhoneNumber_SetPhoneNumber_String()
+        {
+            // Arrange
+            string firstName = "Marc";
+            string lastName = "Davies";
+            string phoneNumber = "3232866556";
+            Client newClient = new Client(firstName, lastName, phoneNumber);
+
+            //Act
+            string updatedPhoneNumber = "3232746995";
+            newClient.SetPhoneNumber(updatedPhoneNumber);
+            string result = newClient.GetPhoneNumber();
+
+            //Assert
+            Assert.AreEqual(updatedPhoneNumber, result);
+        }
+
     }
 }
