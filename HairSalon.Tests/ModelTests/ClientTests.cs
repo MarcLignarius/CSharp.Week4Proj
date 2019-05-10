@@ -231,5 +231,30 @@ namespace HairSalon.Tests
             //Assert
             Assert.AreEqual(1, result);
         }
+
+        [TestMethod]
+        public void Find_ReturnsCorrectClient_Client()
+        {
+            //Arrange
+            int id1 = 1;
+            int id2 = 2;
+            string firstName1 = "Marc";
+            string firstName2 = "Davies";
+            string lastName1 = "Mimi";
+            string lastName2 = "Davies";
+            string phoneNumber1 = "3232866556";
+            string phoneNumber2 = "3232746995";
+            string emailAddress1 = "marcdaviesriot@gmail.com";
+            string emailAddress2 = "mimimdavies@gmail.com";
+            Client newClient1 = new Client(id1, firstName1, lastName1, phoneNumber1, emailAddress1);
+            Client newClient2 = new Client(id2, firstName2, lastName2, phoneNumber2, emailAddress2);
+            List<Client> newList = new List<Client> { newClient1, newClient2 };
+
+            //Act
+            Client result = Client.Find(2);
+
+            //Assert
+            Assert.AreEqual(newClient2, result);
+        }
     }
 }

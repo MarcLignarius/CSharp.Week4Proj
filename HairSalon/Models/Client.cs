@@ -67,6 +67,11 @@ namespace HairSalon.Models
             return _id;
         }
 
+        public static Client Find(int searchId)
+        {
+          return _instances[searchId-1];
+        }
+
         public static List<Client> GetAll()
         {
             return _instances;
