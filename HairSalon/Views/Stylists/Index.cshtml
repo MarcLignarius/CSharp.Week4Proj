@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Chez Marc Hair Salon</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+    <h1>Chez Marc Hair Salon</h1>
+    </div>
+    @if (@Model.Count == 0)
+    {
+        <p>No stylists were found at this time. Click the button below to start adding stylists.</p>
+    }
+    @if(Model.Count != 0)
+    {
+        @foreach (var stylist in Model)
+        {
+            <h3><a href="/stylists/@stylist.GetId()" class="btn btn-dark">@stylist.GetName()</a></h3>
+        }
+    }
+    <div id="space">
+    <div>
+    <hr>
+    <a href="/stylists/new" class="btn btn-dark">Add a new stylist</a>
+    <!-- <form action="/clients/delete" method="post">
+      <button type="submit" name="button" class="btn btn-dark">Clear client list</button>
+    </form> -->
+    <p><a href="/" class="btn btn-dark">Home</a></p>
+  </div>
+</body>
+</html>

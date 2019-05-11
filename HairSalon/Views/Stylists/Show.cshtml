@@ -1,0 +1,30 @@
+@using HairSalon.Models;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Chez Marc Hair Salon</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Chez Marc Hair Salon</h1>
+    </div>
+    <h3>@Model.GetName()'s current clients:</h3>
+    <ul>
+        @foreach (var client in @Model["clients"])
+        {
+            <li><a href="/stylists/@Model["stylist"].GetId()/clients/@client.GetId()" class="btn btn-dark">@client.GetFirstName() @client.GetLastName()</a></li>
+        }
+    </ul>
+    <div id="space">
+    <div>
+    <hr>
+    <p><a href="/categories/@Model["category"].GetId()/items/new" class="btn btn-dark">Add a new client</a></p>
+    <p><a href="/stylists" class="btn btn-dark">Back to stylist list</a></p>
+    <p><a href="/" class="btn btn-dark">Home</a></p>
+  </div>
+</body>
+</html>
