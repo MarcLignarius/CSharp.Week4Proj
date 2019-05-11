@@ -11,8 +11,9 @@
     <div class="jumbotron">
       <h1>Chez Marc Hair Salon</h1>
     </div>
-    <p>Please enter new client information:</p>
-    <form action="/clients" method="post">
+    <p>Add and assign a new client to @Model.GetName():</p>
+    <form action='/stylists/@Model.GetId()/clients' method='post'>
+      <input id='categoryId' name='categoryId' type='hidden' value='@Model.GetId()'>
       <label for="firstName">First Name: </label><br>
       <input id="firstName" name="firstName" type="text"><br>
       <label for="lastName">Last Name: </label><br>
@@ -23,6 +24,9 @@
       <input id="emailAddress" name="emailAddress" type="text"><br>
       <button type="submit" class="btn btn-dark">Add</button>
     </form>
+    <div id="space">
+    <div>
+    <hr>
     <p><a href="/" class="btn btn-dark">Home</a></p>
   </div>
 </body>

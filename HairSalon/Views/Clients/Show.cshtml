@@ -12,15 +12,17 @@
     <div class="jumbotron">
       <h1>Chez Marc Hair Salon</h1>
     </div>
-    <h3>Contact information for @Model.GetFirstName() @Model.GetLastName()</h3>
+    <p>Contact information for @Model["client"]GetFirstName() @Model["client"].GetLastName()</p>
       <ul>
-        <li>Phone Number: @Model.GetPhoneNumber()</li>
-        <li>Email Address: @Model.GetEmailAddress()</li>
+        <li>Phone Number: @Model["client"].GetPhoneNumber()</li>
+        <li>Email Address: @Model["client"].GetEmailAddress()</li>
+        <li>Preferred Stylist: @Model["stylist"].GetName()</li>
       </ul>
     <div id="space">
     <div>
     <hr>
-    <p><a href="/clients" class="btn btn-dark">Back to client list</a></p>
+    <a href="/stylists/@Model["stylist"].GetId()/clients/new" "class=btn btn-dark">Add another client</a>
+    <a href="/stylists" "class=btn btn-dark">View all stylists</a>
   </div>
 </body>
 </html>
