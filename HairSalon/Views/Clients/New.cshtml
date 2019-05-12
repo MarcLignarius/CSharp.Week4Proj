@@ -2,18 +2,18 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <title>Chez Marc Hair Salon</title>
+  <title>Marc's Barbershop</title>
   <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
   <link rel='stylesheet' href='~/css/styles.css' type="text/css">
 </head>
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>Chez Marc Hair Salon</h1>
+      <h1>Marc's Barbershop</h1>
     </div>
     <p>Add and assign a new client to @Model.GetName():</p>
     <form action='/stylists/@Model.GetId()/clients' method='post'>
-      <input id='categoryId' name='categoryId' type='hidden' value='@Model.GetId()'>
+      <input id='stylistId' name='stylistId' type='hidden' value='@Model.GetId()'>
       <label for="firstName">First Name: </label><br>
       <input id="firstName" name="firstName" type="text"><br>
       <label for="lastName">Last Name: </label><br>
@@ -25,7 +25,7 @@
       <button type="submit" class="btn btn-dark">Add</button>
     </form>
     <div id="space">
-    <div>
+    </div>
     <hr>
     <p><a href="/" class="btn btn-dark">Home</a></p>
   </div>

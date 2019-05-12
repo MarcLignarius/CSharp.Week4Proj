@@ -1,28 +1,58 @@
-@using HairSalon.Models;
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset='utf-8'>
-  <title>Chez Marc Hair Salon</title>
+  <title>Marc's Barbershop</title>
   <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
   <link rel='stylesheet' href='~/css/styles.css' type="text/css">
 </head>
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>Chez Marc Hair Salon</h1>
+      <h1>Marc's Barbershop</h1>
     </div>
-    <p>Contact information for @Model["client"]GetFirstName() @Model["client"].GetLastName()</p>
+    <p>Contact information:
+    <p>PhoneNumber: @Model["client"].GetPhoneNumber()</p>
+    <p>Email Address: @Model["client"].GetEmailAddress()</p>
+    <p>Usual stylist: @Model["stylist"].GetName()</p>
+    <a href='/stylists/@Model["stylist"].GetId()/clients/@Model["client"].GetId()/edit' class="btn btn-dark">Edit this client</a>
+    <form action="/stylists/@Model["stylist"].GetId()/clients/@Model["client"].GetId()/delete" method="post">
+      <button type="submit" class="btn btn-dark">Delete this client</button>
+    </form>
+    <div id="space">
+    </div>
+    <hr>
+    <a href="/stylists/@Model["stylist"].GetId()/clients/new" class="btn btn-dark">Add another client</a>
+    <a href="/stylists" class="btn btn-dark">View all stylists</a>
+  </div>
+</body>
+</html>
+
+<!-- @using HairSalon.Models;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Marc's Barbershop</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Marc's Barbershop</h1>
+    </div>
+    <p>Contact information for @Model["client"]GetFirstName()</p>
       <ul>
         <li>Phone Number: @Model["client"].GetPhoneNumber()</li>
         <li>Email Address: @Model["client"].GetEmailAddress()</li>
         <li>Preferred Stylist: @Model["stylist"].GetName()</li>
       </ul>
     <div id="space">
-    <div>
+    </div>
     <hr>
-    <a href="/stylists/@Model["stylist"].GetId()/clients/new" "class=btn btn-dark">Add another client</a>
+    <a href="/stylists/{stylistId}/clients/{clientId}/delete" "class=btn btn-dark">Delete this client</a>
     <a href="/stylists" "class=btn btn-dark">View all stylists</a>
   </div>
 </body>
-</html>
+</html> -->

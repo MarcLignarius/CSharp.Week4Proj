@@ -2,25 +2,29 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <title>Chez Marc Hair Salon</title>
+  <title>Marc's Barbershop</title>
   <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
   <link rel='stylesheet' href='~/css/styles.css' type="text/css">
 </head>
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>Chez Marc Hair Salon</h1>
+      <h1>Marc's Barbershop</h1>
     </div>
     <p>Please enter new stylist information:</p>
     <form action="/stylists" method="post">
       <label for="name">Name: </label><br>
       <input id="name" name="name" type="text"><br>
       <label for="description">About: </label><br>
-      <textarea rows="5" cols="80" id='description' name='description' autofocus="autofocus" required>
+      <textarea rows="5" cols="80" id="description" name="description" autofocus="autofocus" required>
       </textarea><br>
       <button type="submit" class="btn btn-dark">Add</button>
     </form>
-    <p><a href="/" class="btn btn-dark">Home</a></p>
+    <div id="space">
+    </div>
+    <hr>
+    <a href="/categories" class="btn btn-dark">Back to stylists</a>
+    <a href="/" class="btn btn-dark">Home</a>
   </div>
 </body>
 </html>

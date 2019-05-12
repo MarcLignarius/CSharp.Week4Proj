@@ -24,9 +24,9 @@ C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Hair
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.dll
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.pdb
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.csproj.CopyComplete
-C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\DeleteClient.g.cshtml.cs
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Edit.g.cshtml.cs
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Index.g.cshtml.cs
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\New.g.cshtml.cs
 C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Show.g.cshtml.cs
-C:\Users\mimim\Desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\DeleteAllClients.g.cshtml.cs
+C:\Users\mimim\desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Delete.g.cshtml.cs
+C:\Users\mimim\Desktop\HairSalon.Solution\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Stylists\Delete.g.cshtml.cs
