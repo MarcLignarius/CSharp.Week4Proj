@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mimim\\Desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj": {}
+    "C:\\Users\\mimim\\desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mimim\\Desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj": {
+    "C:\\Users\\mimim\\desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mimim\\Desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj",
+        "projectUniqueName": "C:\\Users\\mimim\\desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj",
         "projectName": "HairSalon",
-        "projectPath": "C:\\Users\\mimim\\Desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj",
+        "projectPath": "C:\\Users\\mimim\\desktop\\HairSalon.Solution\\HairSalon\\HairSalon.csproj",
         "packagesPath": "C:\\Users\\mimim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mimim\\Desktop\\HairSalon.Solution\\HairSalon\\obj\\",
+        "outputPath": "C:\\Users\\mimim\\desktop\\HairSalon.Solution\\HairSalon\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

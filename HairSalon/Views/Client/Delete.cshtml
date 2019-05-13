@@ -1,4 +1,3 @@
-@using HairSalon.Models;
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,23 +11,12 @@
     <div class="jumbotron">
       <h1>Marc's Barbershop</h1>
     </div>
-    <ul>
-    @if (Model.Count == 0)
-    {
-      <p>No clients have been added yet. Click the button below to add a client.</p>
-    }
-    @if(Model.Count != 0)
-    {
-      @foreach (Client client in Model)
-      {
-        <li><a href="/clients/@client.GetId()" class="btn btn-dark">@client.GetFirstName()</a></li>
-      }
-    }
-    </ul>
+    <p>The client has been deleted.</p>
     <div id="space">
     </div>
     <hr>
-    <a href="/clients/new" class="btn btn-dark">Add a new client</a>
+    <p><a href="/stylists/@Model["stylist"].GetId()" class="btn btn-dark">Back to stylist</a></p>
+    <p><a href="/" class="btn btn-dark">Home</a></p>
   </div>
 </body>
 </html>

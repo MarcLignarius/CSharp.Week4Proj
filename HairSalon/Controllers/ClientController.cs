@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace HairSalon.Controllers
 {
-    public class ClientsController : Controller
+    public class ClientController : Controller
     {
         [HttpGet("/stylists/{stylistId}/clients/new")]
         public ActionResult New(int stylistId)
@@ -49,10 +49,10 @@ namespace HairSalon.Controllers
         }
 
         [HttpPost("/stylists/{stylistId}/clients/{clientId}")]
-        public ActionResult Update(int stylistId, int clientId, string newFirstName, string newLastName, string newPhoneNumber, string newEmailAddress)
+        public ActionResult Update(int stylistId, int clientId, string newPhoneNumber, string newEmailAddress)
         {
             Client client = Client.Find(clientId);
-            client.Edit(newFirstName, newLastName, newPhoneNumber, newEmailAddress);
+            client.Edit(newPhoneNumber, newEmailAddress);
             Dictionary<string, object> model = new Dictionary<string, object>();
             Stylist stylist = Stylist.Find(stylistId);
             model.Add("stylist", stylist);

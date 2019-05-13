@@ -34,12 +34,17 @@ input {
   margin-bottom: 5px;
 }
 
-p, label {
-  color: white;
-  opacity: 0.80;
-}
-
 hr {
   border-color: white;
   opacity: 0.80;
+}
+
+.list {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.card {
+  background: rgba(61, 58, 57, 0.70);
+  margin-bottom: 5px;
 }

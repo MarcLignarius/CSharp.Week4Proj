@@ -11,7 +11,6 @@
     <div class="jumbotron">
     <h1>Marc's Barbershop</h1>
     </div>
-    <p>Click on a stylist to see more information:</p>
     @if (@Model.Count == 0)
     {
         <p>No stylists were found at this time. Click the button below to start adding stylists.</p>
@@ -20,7 +19,18 @@
     {
         @foreach (var stylist in Model)
         {
-            <a href="/stylists/@stylist.GetId()" class="btn btn-dark">@stylist.GetName()</a>
+        <div class="list">
+          <div class="card col-md-12">
+            <div class="card-body">
+              <h5 class="card-title">@stylist.GetName()</h5>
+              <div class="card-text">
+                <p><em>@stylist.GetDescription()</em></p>
+                <p><a href="/stylists/@stylist.GetId()" class="btn btn-dark">See client list</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
         }
     }
     <div id="space">
