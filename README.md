@@ -20,27 +20,22 @@ _To download and import the database:_
 
 _To clone and launch the application:_
 
-* _Clone from GitHub_
-* _$cd ToDoList.Solution/ToDoList_
-* _$dotnet build then $dotnet run to start the application_
+* _$ git clone [https://github.com/MarcLignarius/csharpWeek3Proj.git](https://github.com/MarcLignarius/csharpWeek3Proj.git)_
+* _$cd csharpWeek3Proj/HairSalon_
+* _$dotnet run to start the application_
 * _Launch [http://localhost:5000/](http://localhost:5000/) in your browser_
 
 ## Specs
 
+* _This is not a complete list of specs, but these are the main program features:_
+
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| 1. Upon launching the application, user has option to *Add a new item* or *View a to do list* | Launch application | ![Image of homepage](https://i.imgur.com/da8KI8G.png) |
-| 2a. Upon clicking on *Add a new item*, user is presented with input field and an *Add* button | Click *Add a new item* | ![Image of additemscreen](https://i.imgur.com/LNIfJMp.png) |
-| 2b. Upon clicking on  *View a to do list*, user is presented with list of to do items | Click  *View a to do list* | ![Image of listscreennoitem](https://i.imgur.com/rDCm0rB.png) |
-| 3. Upon entering an item and clicking on the *Add* button, user is directed to the list of to do items | Enter to do item and click *Add* | ![Image of listscreenitem](https://i.imgur.com/LtFnxkj.png) |
-| 4. User then has option to *Add a new item*, *Clear all items* or click on an item | After clicking *Add* during step 3. | ![Image of listscreenitem](https://i.imgur.com/LtFnxkj.png) |
-| 5a. Upon clicking on *Add a new item*, user is presented with input field and an *Add* button | Click *Add a new item* | ![Image of additemscreen](https://i.imgur.com/LNIfJMp.png) |
-| 5b. Upon clicking on *Clear all items*, user is directed to the now empty list of to do items | Click *Clear all items* | ![Image of listcleared](https://i.imgur.com/kBwqow2.png) |
-| 5c. Upon clicking on an item, user is directed to a detailed description of the to do item | Click on an item | ![Image of itemdetails](https://i.imgur.com/xJI4NuZ.png) |
-| 6. User then has option to *Add another item* or *View all items* | After clicking on item during step 5c. | ![Image of itemdetails](https://i.imgur.com/xJI4NuZ.png) |
-| 7a. Upon clicking on *Add another item*, user is presented with input field and an *Add* button (see 2a.) | Click *Add a new item* | ![Image of additemscreen](https://i.imgur.com/LNIfJMp.png) |
-| 7b. Upon clicking on  *View all items*, user is redirected to the list of to do items (see 2b.) | Click *View a to do list* | ![Image of listscreenitem](https://i.imgur.com/LtFnxkj.png) |
-| 8. After clearing all items (see step 5b.), user can go back to the now empty list by clicking on *Back to list* | Click *Back to list* | ![Image of listscreennoitem](https://i.imgur.com/rDCm0rB.png) |
+| 1. Upon launching the application, user sees homepage | ![Image of homepage](https://i.imgur.com/j3DdDw2.png) |
+| 2. Upon clicking on *View Stylists*, user is presented with a list of stylists | Click *View Stylists* | ![Image of viewstylists](https://i.imgur.com/KRaJLLr.png) |
+| 3. User can click on *Add a new stylist* to be directed to a form | Click  *Add a new stylist* | ![Image of addstylist](https://i.imgur.com/HxAUzMx.png) |
+| 4. Once a stylist is added, user can click on *See client list* to view this stylist's clients | Click on *See client list* | ![Image of viewclients](https://i.imgur.com/O9U3o39.png) |
+| 5. User can click on *Add a new client* to be directed to a form and add a client for that stylist | Click  *Add a new client* | ![Image of addclient](https://i.imgur.com/tOPBGuJ.png) |
 
 ## Known Bugs
 
@@ -58,4 +53,4 @@ _C#, .NET, MVC, MySQL_
 
 *This software is licensed under the GPL license.*
 
-Copyright (c) 2019 **_Marc Davies and Brooke Kullberg_**
+Copyright (c) 2019 **_Marc Davies_**
