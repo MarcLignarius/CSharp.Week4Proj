@@ -31,7 +31,7 @@ _To clone and launch the application:_
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| 1. Upon launching the application, user sees homepage | ![Image of homepage](https://i.imgur.com/j3DdDw2.png) |
+| 1. Upon launching the application, user sees homepage | Launch localhost | ![Image of homepage](https://i.imgur.com/j3DdDw2.png) |
 | 2. Upon clicking on *View Stylists*, user is presented with a list of stylists | Click *View Stylists* | ![Image of viewstylists](https://i.imgur.com/KRaJLLr.png) |
 | 3. User can click on *Add a new stylist* to be directed to a form | Click  *Add a new stylist* | ![Image of addstylist](https://i.imgur.com/HxAUzMx.png) |
 | 4. Once a stylist is added, user can click on *See client list* to view this stylist's clients | Click on *See client list* | ![Image of viewclients](https://i.imgur.com/O9U3o39.png) |
