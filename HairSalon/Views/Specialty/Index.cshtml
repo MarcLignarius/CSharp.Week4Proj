@@ -1,0 +1,46 @@
+@using HairSalon.Models;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Snappy Snips</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Snappy Snips</h1>
+    </div>
+    <ul>
+    @if (Model.Count == 0)
+    {
+      <p>No specialties were found at this time. Click the button below to start adding specialties.</p>
+    }
+    @if(Model.Count != 0)
+    {
+      @foreach (var specialty in Model)
+      {
+      <div class="list">
+        <div class="card col-md-12">
+          <div class="card-body">
+            <h5 class="card-title">@specialty.GetName()</h5>
+            <div class="card-text">
+              <p><em>@specialty.GetDescription()</em></p>
+              <p><a href="/specialties/@specialty.GetId()" class="btn btn-dark">See stylists</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      }
+    }
+    </ul>
+    <div id="space">
+    </div>
+    <hr>
+    <a href="/items/new" class="btn btn-dark">Add a new item</a>
+    <a href="/" class="btn btn-dark">Home</a>
+  </div>
+</body>
+</html>
