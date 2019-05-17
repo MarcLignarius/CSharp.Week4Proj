@@ -6,30 +6,15 @@ namespace HairSalon.Models
 {
     public class Specialty
     {
-        private string _name;
-        private string _description;
-        private int _id;
+        public string Name {get; set;}
+        public string Description {get; set;}
+        public int Id {get; set;}
 
         public Specialty (string name, string description, int id = 0)
         {
-            _name = name;
-            _description = description;
-            _id = id;
-        }
-
-        public string GetName()
-        {
-            return _name;
-        }
-
-        public string GetDescription()
-        {
-            return _description;
-        }
-
-        public int GetId()
-        {
-            return _id;
+            Name = name;
+            Description = description;
+            Id = id;
         }
 
         public static List<Specialty> GetAll()
@@ -108,9 +93,9 @@ namespace HairSalon.Models
             else
             {
                 Specialty newSpecialty = (Specialty) otherSpecialty;
-                bool idEquality = this.GetId() == newSpecialty.GetId();
-                bool nameEquality = this.GetName() == newSpecialty.GetName();
-                bool descriptionEquality = this.GetDescription() == newSpecialty.GetDescription();
+                bool idEquality = this.Id.Equals(newSpecialty.Id);
+                bool nameEquality = this.Name.Equals(newSpecialty.Name);
+                bool descriptionEquality = this.Description.Equals(newSpecialty.Description);
                 return (idEquality && nameEquality && descriptionEquality);
             }
         }
@@ -123,14 +108,14 @@ namespace HairSalon.Models
             cmd.CommandText = @"INSERT INTO specialties (name, description) VALUES (@name, @description);";
             MySqlParameter name = new MySqlParameter();
             name.ParameterName = "@name";
-            name.Value = this._name;
+            name.Value = this.Name;
             cmd.Parameters.Add(name);
             MySqlParameter description = new MySqlParameter();
             description.ParameterName = "@description";
-            description.Value = this._description;
+            description.Value = this.Description;
             cmd.Parameters.Add(description);
             cmd.ExecuteNonQuery();
-            _id = (int) cmd.LastInsertedId;
+            Id = (int) cmd.LastInsertedId;
             conn.Close();
             if (conn != null)
             {
@@ -146,7 +131,7 @@ namespace HairSalon.Models
             cmd.CommandText = @"DELETE FROM specialties WHERE id = @specialty_id; DELETE FROM stylists_specialties WHERE specialty_id = @specialty_id;";
             MySqlParameter specialtyIdParameter = new MySqlParameter();
             specialtyIdParameter.ParameterName = "@specialty_id";
-            specialtyIdParameter.Value = this.GetId();
+            specialtyIdParameter.Value = this.Id;
             cmd.Parameters.Add(specialtyIdParameter);
             cmd.ExecuteNonQuery();
             if (conn != null)
@@ -161,21 +146,21 @@ namespace HairSalon.Models
             conn.Open();
             var cmd = conn.CreateCommand() as MySqlCommand;
             cmd.CommandText = @"SELECT stylists.* FROM specialties
-                JOIN stylists_specialties ON (specialties.id = stylists_specialties.specialty_id)
-                JOIN stylists ON (stylists_specialties.stylist_id = stylists.id)
-                WHERE specialties.id = @specialty_id;";
+                                  JOIN stylists_specialties ON (specialties.id = stylists_specialties.specialty_id)
+                                  JOIN stylists ON (stylists_specialties.stylist_id = stylists.id)
+                              WHERE specialties.id = @specialty_id;";
             MySqlParameter specialtyIdParameter = new MySqlParameter();
             specialtyIdParameter.ParameterName = "@specialty_id";
-            specialtyIdParameter.Value = _id;
+            specialtyIdParameter.Value = Id;
             cmd.Parameters.Add(specialtyIdParameter);
             var rdr = cmd.ExecuteReader() as MySqlDataReader;
             List<Stylist> stylists = new List<Stylist> {};
             while(rdr.Read())
             {
-                int thisStylistId = rdr.GetInt32(0);
+                int stylistId = rdr.GetInt32(0);
                 string stylistName = rdr.GetString(1);
                 string stylistDescription = rdr.GetString(2);
-                Stylist foundStylist = new Stylist(stylistName, stylistDescription, thisStylistId);
+                Stylist foundStylist = new Stylist(stylistName, stylistDescription, stylistId);
                 stylists.Add(foundStylist);
             }
             conn.Close();
@@ -198,7 +183,7 @@ namespace HairSalon.Models
             cmd.Parameters.Add(stylist_id);
             MySqlParameter specialty_id = new MySqlParameter();
             specialty_id.ParameterName = "@specialty_id";
-            specialty_id.Value = _id;
+            specialty_id.Value = Id;
             cmd.Parameters.Add(specialty_id);
             cmd.ExecuteNonQuery();
             conn.Close();
