@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: May 16, 2019 at 09:43 PM
--- Server version: 5.6.38
--- PHP Version: 7.2.1
+-- Generation Time: May 17, 2019 at 03:56 PM
+-- Server version: 5.7.24
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -42,7 +44,9 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `first_name`, `last_name`, `phone_number`, `email_address`, `stylist_id`) VALUES
-(1, 'Marc', 'Davies', '3232866556', 'marcdaviesriot@gmail.com', 1);
+(1, 'Marc', 'Davies', '3232866556', 'marcdaviesriot@gmail.com', 1),
+(2, 'Mimi', 'Davies', '3232746995', 'mimimdavies@gmail.com', 3),
+(3, 'Chloe', 'Davies', '3232866886', 'chloedavies@gmail.com', 2);
 
 -- --------------------------------------------------------
 
@@ -53,7 +57,7 @@ INSERT INTO `clients` (`id`, `first_name`, `last_name`, `phone_number`, `email_a
 CREATE TABLE `stylists` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `description` text NOT NULL
+  `description` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -61,7 +65,9 @@ CREATE TABLE `stylists` (
 --
 
 INSERT INTO `stylists` (`id`, `name`, `description`) VALUES
-(1, 'Sara', 'In the comfort of her private hair salon in Beaverton, Sara, a master hair stylist with over 10 years of expertise, offers each client a professional, unique, personalized experience. When you consult with her, she patiently listens to your hair experiences and what you want in styling and maintaining your hair.');
+(1, 'Ally', 'Ally wants to create hair as dimensional as the lives of her clients, and is a visual artist, using hair as her chosen art form and medium. Ally thrives in a problem solving approach to a hair service or corrective color. She enjoys creating movement and texture for medium to long hair lengths, and cultivating functional hairstyles to suit the lifestyles of her clients.       '),
+(2, 'Rachel', 'Whether it’s a breezy blonde balayage or perfectly blended extensions, Rachel loves it all. Rachel is motivated to emphasize your natural beauty and have you leaving the salon refreshed and confident, always keeping the integrity of your hair at the forefront of her work. She enjoys working with all shades of blonde, and fine textured hair.       '),
+(3, 'Noelle', 'Noelle uses her passion for, knowledge of retro styling and hunger for learning cutting edge technique to fuel her art form. She wants to get to know you, your lifestyle and ultimate hair goals, in order to find the look and feel you’ve been searching for, and that is uniquely you.       ');
 
 --
 -- Indexes for dumped tables
@@ -87,13 +93,14 @@ ALTER TABLE `stylists`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `stylists`
 --
 ALTER TABLE `stylists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

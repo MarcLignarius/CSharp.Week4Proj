@@ -14,12 +14,6 @@ namespace HairSalon.Controllers
             return View(allStylists);
         }
 
-        [HttpGet("/stylists/new")]
-        public ActionResult New()
-        {
-          return View();
-        }
-
         [HttpPost("/stylists")]
         public ActionResult Create(string name, string description)
         {
@@ -27,6 +21,12 @@ namespace HairSalon.Controllers
             newStylist.Save();
             List<Stylist> allStylists = Stylist.GetAll();
             return View("Index", allStylists);
+        }
+
+        [HttpGet("/stylists/new")]
+        public ActionResult New()
+        {
+          return View();
         }
 
         [HttpGet("/stylists/{id}")]
@@ -52,5 +52,13 @@ namespace HairSalon.Controllers
             model.Add("stylist", foundStylist);
             return View("Show", model);
         }
+
+        [HttpPost("/stylists/delete-stylists")]
+        public ActionResult DeleteAll()
+        {
+            Stylist.ClearAll();
+            return RedirectToAction("Index");
+        }
+
     }
 }
