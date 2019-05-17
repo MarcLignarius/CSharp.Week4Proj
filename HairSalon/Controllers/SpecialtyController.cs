@@ -51,3 +51,5 @@ namespace HairSalon.Controllers
             specialty.AddStylist(stylist);
             return RedirectToAction("Show",  new { id = specialtyId });
         }
+    }
+}

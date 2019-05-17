@@ -122,3 +122,6 @@ C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\HairSal
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.dll
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.pdb
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.csproj.CopyComplete
+C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Specialty\Index.g.cshtml.cs
+C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Specialty\New.g.cshtml.cs
+C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Specialty\Show.g.cshtml.cs
