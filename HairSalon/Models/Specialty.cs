@@ -194,7 +194,7 @@ namespace HairSalon.Models
             cmd.CommandText = @"INSERT INTO stylists_specialties (stylist_id, specialty_id) VALUES (@stylist_id, @specialty_id);";
             MySqlParameter stylist_id = new MySqlParameter();
             stylist_id.ParameterName = "@stylist_id";
-            stylist_id.Value = newStylist.GetId();
+            stylist_id.Value = newStylist.Id;
             cmd.Parameters.Add(stylist_id);
             MySqlParameter specialty_id = new MySqlParameter();
             specialty_id.ParameterName = "@specialty_id";

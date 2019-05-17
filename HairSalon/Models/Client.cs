@@ -6,11 +6,11 @@ namespace HairSalon.Models
 {
     public class Client
     {
-        private string FirstName {get; set;}
-        private string LastName {get; set;}
-        private string PhoneNumber {get; set;}
-        private string EmailAddress {get; set;}
-        private int Id {get; set;}
+        public string FirstName {get; set;}
+        public string LastName {get; set;}
+        public string PhoneNumber {get; set;}
+        public string EmailAddress {get; set;}
+        public int Id {get; set;}
 
         public Client (string firstName, string lastName, string phoneNumber, string emailAddress, int id = 0)
         {
@@ -30,11 +30,11 @@ namespace HairSalon.Models
             else
             {
                 Client newClient = (Client) otherClient;
-                bool idEquality = this.Id == newClient.Id;
-                bool firstNameEquality = this.FirstName == newClient.FirstName;
-                bool lastNameEquality = this.LastName == newClient.LastName;
-                bool phoneNumberEquality = this.PhoneNumber == newClient.PhoneNumber;
-                bool emailAddressEquality = this.EmailAddress == newClient.EmailAddress;
+                bool idEquality = this.Id.Equals(newClient.Id);
+                bool firstNameEquality = this.FirstName.Equals(newClient.FirstName);
+                bool lastNameEquality = this.LastName.Equals(newClient.LastName);
+                bool phoneNumberEquality = this.PhoneNumber.Equals(newClient.PhoneNumber);
+                bool emailAddressEquality = this.EmailAddress.Equals(newClient.EmailAddress);
                 return (idEquality && firstNameEquality && lastNameEquality && phoneNumberEquality && emailAddressEquality);
             }
         }
