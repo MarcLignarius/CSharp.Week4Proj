@@ -11,22 +11,35 @@
     <div class="jumbotron">
       <h1>Snappy Snips</h1>
     </div>
-    <h5>Current clients:</h5><br>
+    <h5>@Model["stylist"].Name 's current clients:</h5><br>
     @if(Model.Count == 0)
     {
       <p>No clients were found at this time. Click the button below to start adding clients.</p>
     }
     @if(Model.Count != 0)
     {
-      @foreach (var client in @Model["clients"])
+      @foreach (var client in @Model["stylistClients"])
       {
-        <a href="/stylists/@Model["stylist"].GetId()/clients/@client.GetId()" class="btn btn-dark">@client.GetFirstName() @client.GetLastName()</a><br>
+        <a href="clients/@client.Id" class="btn btn-dark">@client.FirstName @client.LastName</a><br>
       }
     }
+    <br>
+    <h5>Add a client to @Model["stylist"].Name:</h5><br>
+    <form action='/stylists/@Model["stylist"].Id/clients/new' method='post'>
+      <label for='client_id'>Select a client:</label><br>
+      <select id='client_id' name='client_id' type='text'><br>
+        @foreach (var client in @Model["allClients"])
+        {
+          <option value='@client.Id'>@client.FirstName @client.LastName</option><br>
+        }
+      </select><br>
+      <br>
+      <button type='submit' class="btn btn-dark">Add client</button>
+    </form>
     <div id="space">
     </div>
     <hr>
-    <a href="/stylists/@Model["stylist"].GetId()/clients/new" class="btn btn-dark">Add a new client</a>
+    <a href="/stylists/@Model["stylist"].Id/clients/new" class="btn btn-dark">Add a new client</a>
     <a href="/stylists" class="btn btn-dark">Back to stylist list</a>
     <a href="/" class="btn btn-dark">Home</a>
   </div>

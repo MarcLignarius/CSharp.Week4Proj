@@ -11,15 +11,15 @@
     <div class="jumbotron">
       <h1>Snappy Snips</h1>
     </div>
-    <h5>Update information for @Model["client"].GetFirstName() @Model["client"].GetLastName()</h5><br>
-    <form action="/stylists/@Model["stylist"].GetId()/clients/@Model["client"].GetId()" method="post">
+    <h5>Update information for @Model["client"].FirstName @Model["client"].LastName</h5><br>
+    <form action="/stylists/@Model["stylist"].Id/clients/@Model["client"].Id" method="post">
       <label for="newPhoneNumber">Phone Number:</label><br>
-      <input type="text" name="newPhoneNumber" value="@Model["client"].GetPhoneNumber()"><br>
+      <input type="text" name="newPhoneNumber" value="@Model["client"].PhoneNumber"><br>
       <label for="newEmailAddress">Email Address:</label><br>
-      <input type="text" name="newEmailAddress" value="@Model["client"].GetEmailAddress()"><br>
+      <input type="text" name="newEmailAddress" value="@Model["client"].EmailAddress"><br>
       <br>
       <button type="submit" class="btn btn-dark">Update</button>
-      <a href="/stylists/@Model["stylist"].GetId()/clients/@Model["client"].GetId()" class="btn btn-dark">Cancel</a>
+      <a href="/stylists/@Model["stylist"].Id/clients/@Model["client"].Id" class="btn btn-dark">Cancel</a>
     </form>
     <div id="space">
     </div>
