@@ -107,11 +107,6 @@ C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\HairSal
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.TagHelpers.input.cache
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.TagHelpers.output.cache
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\HairSalon.RazorCoreGenerate.cache
-C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Client\Delete.g.cshtml.cs
-C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Client\Edit.g.cshtml.cs
-C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Client\Index.g.cshtml.cs
-C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Client\New.g.cshtml.cs
-C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Client\Show.g.cshtml.cs
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Stylist\Index.g.cshtml.cs
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Stylist\New.g.cshtml.cs
@@ -125,3 +120,8 @@ C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\HairSal
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Specialty\Index.g.cshtml.cs
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Specialty\New.g.cshtml.cs
 C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Specialty\Show.g.cshtml.cs
+C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Specialty\Edit.g.cshtml.cs
+C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Stylist\Edit.g.cshtml.cs
+C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Edit.g.cshtml.cs
+C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\New.g.cshtml.cs
+C:\Users\mimim\desktop\csharpWeek4Proj\HairSalon\obj\Debug\netcoreapp2.2\Razor\Views\Clients\Show.g.cshtml.cs

@@ -20,8 +20,8 @@ _To download and import the database:_
 
 _To clone and launch the application:_
 
-* _$ git clone [https://github.com/MarcLignarius/csharpWeek3Proj.git](https://github.com/MarcLignarius/csharpWeek3Proj.git)_
-* _$cd csharpWeek3Proj/HairSalon_
+* _$ git clone [https://github.com/MarcLignarius/csharpWeek4Proj.git](https://github.com/MarcLignarius/csharpWeek4Proj.git)_
+* _$cd csharpWeek4Proj/HairSalon_
 * _$dotnet run to start the application_
 * _Launch [http://localhost:5000/](http://localhost:5000/) in your browser_
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: May 18, 2019 at 12:18 AM
+-- Generation Time: May 21, 2019 at 11:03 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.10
 
@@ -66,18 +66,6 @@ CREATE TABLE `stylists` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stylists_clients`
---
-
-CREATE TABLE `stylists_clients` (
-  `id` int(11) NOT NULL,
-  `client_id` int(11) NOT NULL,
-  `stylist_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `stylists_specialties`
 --
 
@@ -110,12 +98,6 @@ ALTER TABLE `stylists`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `stylists_clients`
---
-ALTER TABLE `stylists_clients`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `stylists_specialties`
 --
 ALTER TABLE `stylists_specialties`
@@ -129,31 +111,25 @@ ALTER TABLE `stylists_specialties`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `specialties`
 --
 ALTER TABLE `specialties`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `stylists`
 --
 ALTER TABLE `stylists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `stylists_clients`
---
-ALTER TABLE `stylists_clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `stylists_specialties`
 --
 ALTER TABLE `stylists_specialties`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

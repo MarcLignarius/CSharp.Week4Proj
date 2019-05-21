@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Snappy Snips</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Snappy Snips</h1>
+    </div>
+    <h5>Contact information for @Model["client"].FirstName @Model["client"].LastName</h5><br>
+    <p>Phone Number: @Model["client"].PhoneNumber</p>
+    <p>Email Address: @Model["client"].EmailAddress</p>
+    <p>Usual Stylist: @Model["stylist"].Name</p><br>
+    <form action="/stylists/@Model["stylist"].Id/clients/@Model["client"].Id/delete" method="post">
+      <button type="submit" class="btn btn-dark">Delete this client</button>
+      <a href="/stylists/@Model["stylist"].Id/clients/@Model["client"].Id/edit" class="btn btn-dark">Edit this client</a>
+    </form>
+    <div id="space">
+    </div>
+    <hr>
+    <a href="/stylists/@Model["stylist"].Id" class="btn btn-dark">Back to client list</a>
+    <a href="/" class="btn btn-dark">Home</a>
+  </div>
+</body>
+</html>

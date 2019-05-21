@@ -1,27 +1,17 @@
-using Microsoft.AspNetCore.Mvc;
-using HairSalon.Models;
 using System.Collections.Generic;
 using System;
+using Microsoft.AspNetCore.Mvc;
+using HairSalon.Models;
 
 namespace HairSalon.Controllers
 {
     public class SpecialtyController : Controller
     {
-
         [HttpGet("/specialties")]
         public ActionResult Index()
         {
             List<Specialty> allSpecialties = Specialty.GetAll();
             return View(allSpecialties);
-        }
-
-        [HttpPost("/specialties")]
-        public ActionResult Create(string name, string description)
-        {
-            Specialty newSpecialty = new Specialty(name, description);
-            newSpecialty.Save();
-            List<Specialty> allSpecialties = Specialty.GetAll();
-            return View("Index", allSpecialties);
         }
 
         [HttpGet("/specialties/new")]
@@ -30,25 +20,62 @@ namespace HairSalon.Controllers
             return View();
         }
 
-        [HttpGet("/specialties/{id}")]
-        public ActionResult Show(int id)
+        [HttpPost("/specialties")]
+        public ActionResult Create(string name, string description)
+        {
+            Specialty newSpecialty = new Specialty(name, description);
+            newSpecialty.Save();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet("/specialties/{specialtyId}")]
+        public ActionResult Show(int specialtyId)
         {
             Dictionary<string, object> model = new Dictionary<string, object>();
-            Specialty selectedSpecialty = Specialty.Find(id);
-            List<Stylist> specialtyStylists = selectedSpecialty.GetStylists();
+            Specialty foundSpecialty = Specialty.Find(specialtyId);
+            List<Stylist> stylistSpecialties = foundSpecialty.GetStylists();
             List<Stylist> allStylists = Stylist.GetAll();
-            model.Add("selectedSpecialty", selectedSpecialty);
-            model.Add("specialtyStylists", specialtyStylists);
-            model.Add("allStylists", allStylists);
+            model.Add("stylists", allStylists);
+            model.Add("specialty", foundSpecialty);
+            model.Add("stylistSpecialties", stylistSpecialties);
             return View(model);
         }
 
-        [HttpPost("/specialties/{specialtyId}/stylists/new")]
-        public ActionResult AddStylist(int specialtyId, int stylistId)
+        [HttpGet("/specialties/{specialtyId}/edit")]
+        public ActionResult Edit(int specialtyId)
         {
-            Specialty specialty = Specialty.Find(specialtyId);
-            Stylist stylist = Stylist.Find(stylistId);
-            specialty.AddStylist(stylist);
+            Specialty foundSpecialty = Specialty.Find(specialtyId);
+            return View(foundSpecialty);
+        }
+
+        [HttpPost("/specialties/{specialtyId}/edit")]
+        public ActionResult Update(string newSpecialtyName, string newSpecialtyDescription, int specialtyId)
+        {
+            Specialty selectedSpecialty = Specialty.Find(specialtyId);
+            selectedSpecialty.Edit(newSpecialtyName, newSpecialtyDescription);
+            return RedirectToAction("Show", new {id = specialtyId});
+        }
+
+        [HttpPost("/specialties/{specialtyId}/delete-specialty")]
+        public ActionResult Delete(int specialtyId)
+        {
+            Specialty selectedSpecialty = Specialty.Find(specialtyId);
+            selectedSpecialty.DeleteSpecialty();
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost("/specialties/delete-specialties")]
+        public ActionResult DeleteSpecialties(int specialtyId)
+        {
+            Specialty.ClearAll();
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost("/specialties/{specialtyId}/add-stylist")]
+        public ActionResult AddStylist(int specialtyId, int id)
+        {
+            Specialty foundSpecialty = Specialty.Find(specialtyId);
+            foundSpecialty.AddStylist(id);
             return RedirectToAction("Show", new {id = specialtyId});
         }
     }

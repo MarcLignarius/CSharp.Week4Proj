@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Snappy Snips</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Snappy Snips</h1>
+    </div>
+    <h5>Add a new client:</h5><br>
+    <form action='/specialties' method='post'>
+      <label for="name">Specialty name:</label><br>
+      <input id="name" name="name" type="text"><br>
+      <label for="description">Specialty Information: </label><br>
+      <textarea rows="5" cols="80" id="description" name="description" autofocus="autofocus" required>
+      </textarea><br>
+      <button type='submit' class="btn btn-dark">Add Specialty</button>
+    </form>
+    <div id="space">
+    </div>
+    <hr>
+    <a href="/specialties" class="btn btn-dark">Back to specialties list</a>
+    <a href="/" class="btn btn-dark">Home</a>
+  </div>
+</body>
+</html>

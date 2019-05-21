@@ -11,8 +11,8 @@
     <div class="jumbotron">
       <h1>Snappy Snips</h1>
     </div>
-    <h5>Add and assign a new client to stylist @Model.Name:</h5><br>
-    <form action='/stylists/@Model.Id/clients' method='post'>
+    <h5>Add a new client:</h5><br>
+    <form action='/stylists/@Model.Id/clients/new' method='post'>
       <input id='stylistId' name='stylistId' type='hidden' value='@Model.Id'>
       <label for="firstName">First Name: </label><br>
       <input id="firstName" name="firstName" type="text"><br>

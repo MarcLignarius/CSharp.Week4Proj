@@ -27,7 +27,7 @@
             <h5 class="card-title">@specialty.Name</h5>
             <div class="card-text">
               <p><em>@specialty.Description</em></p>
-              <p><a href="/specialties/@specialty.Id" class="btn btn-dark">See stylists</a></p>
+              <p><a href="/specialties/@specialty.Id/" class="btn btn-dark">See stylists</a></p>
             </div>
           </div>
         </div>
@@ -39,8 +39,11 @@
     <div id="space">
     </div>
     <hr>
-    <a href="/items/new" class="btn btn-dark">Add a new specialty</a>
-    <a href="/" class="btn btn-dark">Home</a>
+    <form action="/specialties/delete-specialties" method="post">
+      <a href="/specialties/new" class="btn btn-dark">Add a new specialty</a>
+      <button type="submit" class="btn btn-dark">Delete all specialties</button>
+      <a href="/" class="btn btn-dark">Home</a>
+    </form>
   </div>
 </body>
 </html>

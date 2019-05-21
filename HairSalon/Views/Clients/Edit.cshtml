@@ -12,7 +12,11 @@
       <h1>Snappy Snips</h1>
     </div>
     <h5>Update information for @Model["client"].FirstName @Model["client"].LastName</h5><br>
-    <form action="/stylists/@Model["stylist"].Id/clients/@Model["client"].Id" method="post">
+    <form action='/stylists/@Model["stylist"].Id/clients/@Model["client"].Id/edit' method='post'>
+      <label for="newFirstName">First Name:</label><br>
+      <input type="text" name="newFirstName" value="@Model["client"].FirstName"><br>
+      <label for="newLastName">Last Name:</label><br>
+      <input type="text" name="newLastName" value="@Model["client"].LastName"><br>
       <label for="newPhoneNumber">Phone Number:</label><br>
       <input type="text" name="newPhoneNumber" value="@Model["client"].PhoneNumber"><br>
       <label for="newEmailAddress">Email Address:</label><br>
