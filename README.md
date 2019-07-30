@@ -10,17 +10,20 @@ _Program which lets a user add, edit and delete stylists and customers for a hai
 
 ## Setup/Installation Requirements
 
+_To clone the application:_
+
+* _$ git clone [https://github.com/MarcLignarius/csharpWeek4Proj.git](https://github.com/MarcLignarius/csharpWeek4Proj.git)_
+
 _To download and import the database:_
 
 * _Start MAMP and click Open WebStart page in the MAMP window._
 * _In the website you're taken to, select phpMyAdmin from the Tools dropdown._
-* _Select the Import tab._
-* _Select marc_davies, and click Go._
-* _Select marc_davies_test, and click Go._
+* _Select the Import tab. Click Choose File._
+* _From the cloned repository, select marc_davies, and click Go._
+* _Repeat with marc_davies_test, and click Go._
 
 _To clone and launch the application:_
 
-* _$ git clone [https://github.com/MarcLignarius/csharpWeek4Proj.git](https://github.com/MarcLignarius/csharpWeek4Proj.git)_
 * _$cd csharpWeek4Proj/HairSalon_
 * _$dotnet run to start the application_
 * _Launch [http://localhost:5000/](http://localhost:5000/) in your browser_
