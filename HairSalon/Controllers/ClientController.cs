@@ -8,7 +8,7 @@ using System;
 namespace HairSalon.Controllers
 {
     public class ClientsController : Controller
-    {
+    {   
         [HttpGet("/stylists/{stylistId}/clients/new")]
         public ActionResult New(int stylistId)
         {
@@ -32,7 +32,7 @@ namespace HairSalon.Controllers
         {
             Client foundClient = Client.Find(clientId);
             foundClient.DeleteClient();
-            return RedirectToAction("Show", "Stylists", new {id = stylistId});
+            return RedirectToAction("Show", "Stylist", new {id = stylistId});
         }
 
         [HttpGet("/stylists/{stylistId}/clients/{clientId}/edit")]
